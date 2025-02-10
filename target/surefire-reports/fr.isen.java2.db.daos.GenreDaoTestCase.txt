@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: fr.isen.java2.db.daos.GenreDaoTestCase
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.412 s <<< FAILURE! -- in fr.isen.java2.db.daos.GenreDaoTestCase
+fr.isen.java2.db.daos.GenreDaoTestCase.shouldListGenres -- Time elapsed: 0.228 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 3 but was: 0 in:
+[]
+	at fr.isen.java2.db.daos.GenreDaoTestCase.shouldListGenres(GenreDaoTestCase.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+fr.isen.java2.db.daos.GenreDaoTestCase.shouldGetGenreByName -- Time elapsed: 0.054 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.isen.java2.db.entities.Genre.getId()" because "genre" is null
+	at fr.isen.java2.db.daos.GenreDaoTestCase.shouldGetGenreByName(GenreDaoTestCase.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
