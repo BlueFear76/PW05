@@ -19,7 +19,7 @@ public class GenreDao {
 		Connection connection = null;
 		try{
 			connection = DataSourceFactory.getDataSource().getConnection();
-            System.out.println("Connection to the DataBase");
+            System.out.println("Connexion avec la base de donnée");
             String sqlQuery = "SELECT * FROM genre";
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sqlQuery);
@@ -58,7 +58,7 @@ public class GenreDao {
 	    ResultSet resultSet = null;
 	    try {
 	        connection = DataSourceFactory.getDataSource().getConnection();
-	        System.out.println("Connection to the DataBase");
+	        System.out.println("Connexion avec la base de donnée");
 	        String sqlQuery = "SELECT * FROM genre WHERE name = ?";
 	        statement = connection.prepareStatement(sqlQuery);
 	        statement.setString(1, name);
@@ -90,7 +90,7 @@ public class GenreDao {
 		Connection connection = null;
 		try{
 			connection = DataSourceFactory.getDataSource().getConnection();
-            System.out.println("Connection to the DataBase");
+            System.out.println("Connexion avec la base de donnée");
             String sqlQuery = "INSERT INTO genre(name) VALUES('"+ name +"')";
             statement = connection.prepareStatement(sqlQuery);
             int rowsAffected = statement.executeUpdate();

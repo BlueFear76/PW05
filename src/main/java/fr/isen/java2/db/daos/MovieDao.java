@@ -19,7 +19,7 @@ public class MovieDao {
 		Connection connection = null;
 		try{
 			connection = DataSourceFactory.getDataSource().getConnection();
-            System.out.println("Connection to the DataBase");
+            System.out.println("Connexion avec la base de donnée");
             String sqlQuery = "SELECT * FROM movie JOIN genre ON movie.genre_id = genre.idgenre";
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sqlQuery);
@@ -62,7 +62,7 @@ public class MovieDao {
 		Connection connection = null;
 		try{
 			connection = DataSourceFactory.getDataSource().getConnection();
-            System.out.println("Connection to the DataBase");
+            System.out.println("Connexion avec la base de donnée");
              String sqlQuery = "SELECT * FROM movie JOIN genre ON movie.genre_id = genre.idgenre WHERE genre.name = ?";
             statement = connection.prepareStatement(sqlQuery);
 	        statement.setString(1, genreName);
@@ -106,7 +106,7 @@ public class MovieDao {
 		Connection connection = null;
 		try{
 			connection = DataSourceFactory.getDataSource().getConnection();
-            System.out.println("Connection to the DataBase");
+            System.out.println("Connexion avec la base de donnée");
             String sqlQuery = "INSERT INTO movie(title,release_date,genre_id,duration,director,summary) VALUES(?,?,?,?,?,?)";
             statement = connection.prepareStatement(sqlQuery);
 	        statement.setString(1, movie.getTitle());
